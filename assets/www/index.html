@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>  
+<html>  
+  <head>  
+    <meta name="viewport" content="width=320, user-scalable=no" />  
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">  
+    <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no" />
+
+    <title>RSS App</title>  
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+	    google.load("feeds", "1");	
+	    function initializeGoogle() {
+	      app = start();
+	    }
+	    google.setOnLoadCallback(initializeGoogle);
+    </script>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="childbrowser.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mustache.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jqm.js"></script>
+
+
+   </script>  
+  </head>  
+  <body>
+
+    <div id="page_principal" data-role="page">
+      <div data-role="header" class="header">
+        <h1>RSS APP</h1>
+        <div><a class="add_button"></a></div>
+      </div>
+      <div data-role="content">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+    <div id="add_rss" data-role="page">
+      <div data-role="header" class="header">
+      	<a data-rel="back" data-icon="back"> Atrás</a>
+        <h1>A&Ntilde;adir RSS</h1>
+      </div>
+      <div data-role="content">
+      	<div class='content'></div>
+      </div>
+    </div>
+    
+    <div id="listado_blog" data-role="page">
+      <div data-role="header" class="header">
+      	<a data-rel="back" data-icon="back"> Atrás</a>
+        <h1></h1>
+      </div>
+      <div data-role="content">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+    
+    <div id="contenido_blog" data-role="page">
+      <div data-role="header" class="header">
+      	<a data-rel="back" data-icon="back"> Atrás</a>
+        <h1></h1>
+      </div>
+      <div data-role="content">
+        <div class="content article_content">
+        </div>
+      </div>
+    </div>
+
+  </body>  
+</html>

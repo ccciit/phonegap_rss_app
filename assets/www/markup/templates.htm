@@ -1,0 +1,34 @@
+<script id="plantilla-add-feed">
+	<form id="add_feed" data-role="none">
+		<input data-role="none" type="text" name="nombre" placeholder="Nombre blog" />
+		<input data-role="none" type="text" name="url" placeholder="Direccion blog" />
+		<input class="button" data-role="none" type="button" value="GUARDAR"/>
+	</form>
+</script>
+
+<script id="plantilla-portada">
+	<ul class="listado_portada">
+		{{^blogs}}
+			<li><div>NO HA A&Ntilde;ADIDO NINGUNA SUSCRIPCION DE MOMENTO...</div></li>
+		{{/blogs}}
+		{{#blogs}}
+			<li data-index="{{indice}}"><div>{{nombre}}</div></li>
+		{{/blogs}}		
+	</ul>
+</script>
+
+<script id="plantilla-listado-blog">
+	<ul class="listado_blogs">
+	{{^articulos}}
+		<li><div>NO SE HA ENCONTRADO NING&Uacute;N ART&Iacute;CULO EN ESTE FEED</div></li>
+	{{/articulos}}
+	{{#articulos}}
+		<li data-index="{{indice}}"><div>{{title}}</div></li>
+	{{/articulos}}	
+	</ul>
+</script>
+
+<script id="plantilla-detalle-blog">
+	<h1>{{title}}</h1>
+	<div>{{{content}}}</div>
+</script>
